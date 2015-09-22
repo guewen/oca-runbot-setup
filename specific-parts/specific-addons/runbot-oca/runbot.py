@@ -36,7 +36,7 @@ class RunbotRepo(orm.Model):
             run(['sudo', '/usr/sbin/service', 'nginx', 'reload'])
 
     def cron(self, cr, uid, ids=None, context=None):
-        if fqdn() == 'runbot.odoo-communty.org':
+        if fqdn() == 'runbot.odoo-community.org':
             # phase out builds on main server
             return
         return super(RunbotRepo, self).cron(cr, uid, ids, context=context)
